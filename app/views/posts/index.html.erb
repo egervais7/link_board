@@ -6,3 +6,10 @@
     <%= link_to '', new_post_path, class: 'btn btn-primary glyphicon glyphicon-plus pull-right' %>
   </div>
 </div>
+
+<% @post.each do |post| %>
+  <div class="well">
+    <h2><%= link_to post.title, post.link %></h2>
+    <strong>By <%= post.user.name %></strong>
+  </div>
+<% end %>
